@@ -1,5 +1,5 @@
 
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
@@ -49,12 +49,14 @@ module.exports = {
                 {
                     loader: 'css-loader',
                     options: { 
-                        sourceMap: true,
+                        // sourceMap: true,
                         url: false }
                 },
                 {
                     loader: 'sass-loader',
-                    options: { sourceMap: true }
+                    options: { 
+                        // sourceMap: true 
+                    }
                 },
                 {loader: 'postcss-loader',
                     options:{config:{
@@ -70,9 +72,9 @@ module.exports = {
         overlay: true
     },
     plugins: [
-        new webpack.SourceMapDevToolPlugin({
-            filename: '[file].map'
-        }),
+        // new webpack.SourceMapDevToolPlugin({
+        //     filename: '[file].map'
+        // }),
         new MiniCssExtractPlugin({
             filename: "[name].css"
         }),
